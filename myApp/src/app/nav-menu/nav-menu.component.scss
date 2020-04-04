@@ -1,0 +1,11 @@
+:host {
+    .nav-menu {
+        .mat-tab-label {
+            color: red !important;
+        }
+    }
+
+    mat-tab-group mat-tab{
+        color: green;
+    }
+}

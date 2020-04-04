@@ -1,0 +1,13 @@
+<mat-vertical-stepper #stepper [linear]="!isLinear">
+    <mat-step [stepControl]="firstFormGroup">
+        <form [formGroup]="firstFormGroup">
+            <ng-template matStepLabel>Выбор периметра</ng-template>
+        </form>
+    </mat-step>
+
+    <mat-step [stepControl]="secondFormGroup">
+        <form [formGroup]="secondFormGroup">
+            <ng-template matStepLabel>Выбор обьектного моделирования</ng-template>
+        </form>
+    </mat-step>
+</mat-vertical-stepper>
