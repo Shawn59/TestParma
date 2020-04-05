@@ -1,4 +1,4 @@
-<mat-vertical-stepper #stepper [linear]="!isLinear">
+<mat-vertical-stepper #subStepper [linear]="isLinear" (selectionChange)="clickStep(subStepper)">
     <mat-step [stepControl]="firstFormGroup">
         <form [formGroup]="firstFormGroup">
             <ng-template matStepLabel>Выбор периметра</ng-template>

@@ -1,0 +1,30 @@
+<div class="perimeter">
+
+  <h1>Выбор параметров</h1>
+
+  <div class="row">
+    <span class="label">Дата</span>
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" [(ngModel)]="fields.date" #date="ngModel" required>
+      <mat-datepicker-toggle matSuffix [for]="picker"> </mat-datepicker-toggle>
+      <mat-datepicker #picker> </mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <span class="label">Горизонт моделирования</span>
+    <mat-form-field>
+      <input matInput type="number" required [(ngModel)]="fields.modelingHorizon" #modelingHorizon="ngModel">
+    </mat-form-field>
+  </div>
+
+  <div class="row">
+    <span class="label">Исторический горизонт</span>
+    <mat-form-field>
+      <input matInput type="number" required [(ngModel)]="fields.historyHorizon" #historyHorizon="ngModel">
+    </mat-form-field>
+  </div>
+
+  <button [disabled]="historyHorizon.invalid || modelingHorizon.invalid || date.invalid">Push me baby</button>
+
+</div>

@@ -10,3 +10,18 @@ body {
 }
 
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+.row {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+
+  .label {
+    width: 200px;
+    overflow: hidden;
+  }
+
+  mat-form-field {
+    margin-left: 20px;
+  }
+}
