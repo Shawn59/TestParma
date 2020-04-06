@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { MatStepper } from '@angular/material/stepper';
+import { AnalyseSubStepperComponent } from '../analyse-sub-stepper/analyse-sub-stepper.component';
 
 @Component({
   selector: 'app-analyse',
@@ -8,6 +9,7 @@ import { MatStepper } from '@angular/material/stepper';
 })
 export class AnalyseComponent {
   @ViewChild('headStepper') private myStepper: MatStepper;
+  @ViewChild(AnalyseSubStepperComponent) childAnalyseSubStepper: AnalyseSubStepperComponent;
 
   leftStepper = {
     parameters: {

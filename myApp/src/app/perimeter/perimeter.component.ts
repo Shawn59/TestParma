@@ -28,6 +28,8 @@ export class PerimeterComponent implements OnInit {
     ]
   };
 
+  isValid = false;
+
   ngOnInit(): void {
   }
 

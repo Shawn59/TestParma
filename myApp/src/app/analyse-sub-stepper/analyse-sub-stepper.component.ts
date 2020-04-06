@@ -18,7 +18,7 @@ export class AnalyseSubStepperComponent implements OnInit {
     firstFormGroup: FormGroup;
     secondFormGroup: FormGroup;
     @ViewChild('subStepper') private myStepper: MatStepper;
-    @Input() subSelectedIndex : object;
+    @Input() subSelectedIndex;
 
     ngOnInit() {
         this.firstFormGroup = this._formBuilder.group({
@@ -29,19 +29,18 @@ export class AnalyseSubStepperComponent implements OnInit {
         });
     }
 
-  clickStep(stepper: MatStepper) {
-      //console.log(this.subSelectedIndex.value);
-      //this.subSelectedIndex.value = stepper.selectedIndex;
-     // console.log(this.subSelectedIndex + ' ' + this.myStepper.selectedIndex);
+  clickStep(event: any) {
+      //console.log(event);
+      this.subSelectedIndex.value = event.selectedIndex;
 
   }
 
-  goBack(stepper: MatStepper){
-    stepper.previous();
+  goBack(){
+    this.myStepper.previous();
   }
 
-  goForward(stepper: MatStepper){
-    stepper.next();
+  goForward(){
+    this.myStepper.next();
   }
 
 }

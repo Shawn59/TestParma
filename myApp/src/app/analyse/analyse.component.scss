@@ -5,9 +5,14 @@
 
   .analyse-content {
     width: 100%;
-    margin: 20px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 1%;
+
+    .content-block {
+      height: max-content;
+      min-height: 500px;
+      margin: 20px;
+      background-color: white;
+      padding: 20px;
+      border-radius: 1%;
+    }
   }
 }
